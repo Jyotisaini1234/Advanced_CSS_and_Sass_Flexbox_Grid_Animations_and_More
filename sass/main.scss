@@ -72,35 +72,79 @@
 // }
 
 ///////section Implicit & Explicit
+// .container {
+//   display: grid;
+//   height: 1000px;
+//   width: 90vw;
+//   margin: 30px auto;
+//   grid-gap: 20px;
+//   background-color: #ddd;
+//   grid-template-rows: repeat(2, 150px);
+//   grid-template-columns: repeat(2, 1fr);
+//   grid-auto-rows: 80px;
+//   //   padding: 2rem;
+//   grid-auto-flow: column;
+//   grid-auto-columns: 0.5fr;
+//   align-items: center; //strech / end/ center/start
+//   justify-items: center;
+//   .item {
+//     font-size: 2rem;
+//     padding: 1rem;
+//     color: white;
+//     background-color: blue;
+
+//     &--4 {
+//       background-color: crimson;
+//       grid-row: 2 / span 3;
+//       align-self: start;
+//       justify-self: start;
+//     }
+//     &--7 {
+//       grid-column: 1/-1;
+//       background-color: palevioletred;
+//     }
+//   }
+// }
+
+//////////////////////Aligning Track
 .container {
   display: grid;
-  height: 1000px;
   width: 90vw;
   margin: 30px auto;
-  grid-gap: 20px;
+  grid-gap: 60px;
   background-color: #ddd;
-  grid-template-rows: repeat(2, 150px);
-  grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 80px;
-  //   padding: 2rem;
-  grid-auto-flow: column;
+  padding: 2rem;
+  grid-auto-flow: row dense;
   grid-auto-columns: 0.5fr;
-  align-items: center; //strech / end/ center/start
-  justify-items: center;
+
+  //  //grid align
+  // align-items:strech; //strech / end/ center/start
+  //  justify-items:strech;
+
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(2, 100px);
+  // justify-content:center;//space-around/space-evenly/space-between/end/start/center/strech
+  // align-items:center;
+  height: 1000px;
+
   .item {
     font-size: 2rem;
-    padding: 1rem;
+    padding: 2rem;
     color: white;
     background-color: blue;
-
     &--4 {
       background-color: crimson;
       grid-row: 2 / span 3;
-      align-self: start;
-      justify-self: start;
+      // align-self:start;
+      // justify-self:start;
+    }
+    &--6 {
+      background-color: lightcoral;
+      grid-row: 2 / span 2;
     }
     &--7 {
-      grid-column: 1/-1;
+      grid-column: 1 / -1;
       background-color: palevioletred;
     }
   }
