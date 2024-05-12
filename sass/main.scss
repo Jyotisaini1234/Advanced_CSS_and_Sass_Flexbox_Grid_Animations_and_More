@@ -107,45 +107,91 @@
 // }
 
 //////////////////////Aligning Track
+// .container {
+//   display: grid;
+//   width: 90vw;
+//   margin: 30px auto;
+//   grid-gap: 60px;
+//   background-color: #ddd;
+//   grid-auto-rows: 80px;
+//   padding: 2rem;
+//   grid-auto-flow: row dense;
+//   grid-auto-columns: 0.5fr;
+
+//   //  //grid align
+//   // align-items:strech; //strech / end/ center/start
+//   //  justify-items:strech;
+
+//   grid-template-columns: repeat(2, 200px);
+//   grid-template-rows: repeat(2, 100px);
+//   // justify-content:center;//space-around/space-evenly/space-between/end/start/center/strech
+//   // align-items:center;
+//   height: 1000px;
+
+//   .item {
+//     font-size: 2rem;
+//     padding: 2rem;
+//     color: white;
+//     background-color: blue;
+//     &--4 {
+//       background-color: crimson;
+//       grid-row: 2 / span 3;
+//       // align-self:start;
+//       // justify-self:start;
+//     }
+//     &--6 {
+//       background-color: lightcoral;
+//       grid-row: 2 / span 2;
+//     }
+//     &--7 {
+//       grid-column: 1 / -1;
+//       background-color: palevioletred;
+//     }
+//   }
+// }
 .container {
   display: grid;
-  width: 90vw;
+  width: 1000px;
   margin: 30px auto;
-  grid-gap: 60px;
+  // grid-gap:60px;
   background-color: #ddd;
-  grid-auto-rows: 80px;
-  padding: 2rem;
-  grid-auto-flow: row dense;
-  grid-auto-columns: 0.5fr;
-
-  //  //grid align
-  // align-items:strech; //strech / end/ center/start
-  //  justify-items:strech;
-
-  grid-template-columns: repeat(2, 200px);
-  grid-template-rows: repeat(2, 100px);
-  // justify-content:center;//space-around/space-evenly/space-between/end/start/center/strech
-  // align-items:center;
-  height: 1000px;
-
+  //using min-content and max-content
+  // grid-template-rows:repeat(2,150px);
+  // grid-template-rows:repeat(2,min-content);
+  // grid-template-rows:150px min-content;
+  // grid-template-columns:max-content 1fr 1fr min-content;
+  ///using minmmax function
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  grid-template-columns: minmax(300px, 50%) repeat(3, 1fr);
   .item {
     font-size: 2rem;
     padding: 2rem;
     color: white;
     background-color: blue;
-    &--4 {
+
+    &--1 {
+      background-color: orangered;
+    }
+    &--2 {
+      background-color: yellow;
+    }
+    &--3 {
       background-color: crimson;
-      grid-row: 2 / span 3;
-      // align-self:start;
-      // justify-self:start;
+    }
+    &--4 {
+      background-color: red;
+    }
+    &--5 {
+      background-color: green;
     }
     &--6 {
-      background-color: lightcoral;
-      grid-row: 2 / span 2;
+      background-color: pink;
     }
     &--7 {
-      grid-column: 1 / -1;
-      background-color: palevioletred;
+      background-color: royelblue;
+    }
+    &--8 {
+      background-color: black;
     }
   }
 }
