@@ -161,8 +161,14 @@
   // grid-template-rows:150px min-content;
   // grid-template-columns:max-content 1fr 1fr min-content;
   ///using minmmax function
+  // grid-template-rows: repeat(2, minmax(150px, min-content));
+  // grid-template-columns: minmax(300px, 50%) repeat(3, 1fr);
+  //using auto-fit and auto-fill
   grid-template-rows: repeat(2, minmax(150px, min-content));
-  grid-template-columns: minmax(300px, 50%) repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 90%;
   .item {
     font-size: 2rem;
     padding: 2rem;
