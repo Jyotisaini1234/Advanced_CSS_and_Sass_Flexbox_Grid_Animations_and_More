@@ -1,0 +1,5 @@
+.sidbar {
+  background-color: $color-primary-dark;
+  // grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+}
