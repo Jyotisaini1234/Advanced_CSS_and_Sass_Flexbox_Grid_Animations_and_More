@@ -46,10 +46,10 @@
     display: grid;
     align-items: center;
     justify-items: start;
-    // @media only screen and (max-width: $bp-medium) {
-    //   grid-column: 1 / -1;
-    //   grid-row: 5 / 6;
-    // }
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
+    }
   }
   &__text {
     font-size: 1.5rem;
