@@ -209,6 +209,7 @@ body {
 
 .sidbar {
   background-color: #b28451;
+  grid-template-columns: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
   display: flex;
   justify-content: center; }
@@ -283,6 +284,11 @@ body {
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: #f9f7f6;
+  line-height: 1rem; }
 
 .heading-2 {
   font-size: 4rem;
