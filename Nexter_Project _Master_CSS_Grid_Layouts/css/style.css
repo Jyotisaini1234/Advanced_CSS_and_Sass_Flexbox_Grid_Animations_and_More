@@ -70,6 +70,13 @@ body {
 
 .home {
   background-color: #f9f7f6; }
+  .home__img {
+    width: 100%;
+    height: 25rem; }
+  .home__location svg, .home__room svg, .home__area svg, .home__price svg {
+    fill: #c69963;
+    width: 2rem;
+    height: 2rem; }
 
 .relators {
   background-color: #101d2c;
