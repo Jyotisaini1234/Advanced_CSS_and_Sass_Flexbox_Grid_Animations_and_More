@@ -8,6 +8,9 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -18,7 +21,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidbar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 62.5em) {
     .container {
       grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
@@ -143,14 +146,16 @@ body {
     display: block; }
 
 .header {
+  background-color: #252422;
   grid-column: full-start/ col-end 6;
   background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/gallery13.avif);
   background-size: cover;
   padding: 8rem;
+  padding-top: 4rem;
   background-position: center;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, 1fr);
+  grid-template-columns: minmax(min-content, max-content);
   justify-content: center;
   grid-gap: 2rem; }
   .header__nexter {
@@ -173,7 +178,8 @@ body {
     grid-column-gap: 3rem;
     justify-items: center; }
     .header__seenon_logo img {
-      height: 5rem;
+      max-width: 100%;
+      max-height: 5rem;
       filter: brightness(70%); }
   .header__seenon_text {
     grid-template-columns: 1fr max-content 1fr;
@@ -275,10 +281,17 @@ body {
 
 .sidbar {
   background-color: #b28451;
-  grid-template-columns: sidebar-start / sidebar-end;
+  grid-template-columns: sidebar-start/ sidebar-end;
+  grid-column: 1/1;
   grid-row: 1 / -1;
   display: flex;
   justify-content: center; }
+  @media only screen and (max-width: 62.5em) {
+    .sidbar {
+      grid-column: 1 / -1;
+      grid-row: 1/2;
+      justify-content: flex-end;
+      align-items: center; } }
 
 .nav-btn {
   border: none;
@@ -297,6 +310,14 @@ body {
     transform: translateY(-1.5rem); }
   .nav-btn::after {
     transform: translateY(1.3rem); }
+  @media only screen and (max-width: 62.5em) {
+    .nav-btn {
+      margin-top: 0;
+      margin-right: 3rem; }
+      .nav-btn::before {
+        transform: translateY(-1.2rem); }
+      .nav-btn::after {
+        transform: translateY(1rem); } }
 
 .story__pictures {
   background-color: #c69963;
