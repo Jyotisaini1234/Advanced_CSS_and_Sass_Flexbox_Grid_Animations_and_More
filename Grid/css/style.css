@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  height: 1000px;
+  width: 90vw;
+  margin: 30px auto;
+  grid-gap: 20px;
+  background-color: #ddd;
+  grid-template-rows: repeat(2, 150px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 80px;
+  grid-auto-flow: column;
+  grid-auto-columns: 0.5fr;
+  align-items: center;
+  justify-items: center; }
+  .container .item {
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+    background-color: blue; }
+    .container .item--4 {
+      background-color: crimson;
+      grid-row: 2 / span 3;
+      align-self: start;
+      justify-self: start; }
+    .container .item--7 {
+      grid-column: 1/-1;
+      background-color: palevioletred; }
